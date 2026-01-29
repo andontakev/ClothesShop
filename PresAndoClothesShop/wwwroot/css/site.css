@@ -20,3 +20,137 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.hero {
+    height: 90vh;
+    background: url('https://images.unsplash.com/photo-1521335629791-ce4aec67dd47') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+    .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+        .nav-links a:hover {
+            color: #ffd700;
+        }
+
+.hero-content {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+    .hero-content h1 {
+        font-size: 48px;
+        font-weight: 600;
+    }
+
+    .hero-content p {
+        margin: 15px 0;
+        font-size: 20px;
+    }
+
+.btn-main {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #ffd700;
+    color: #000;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+    .btn-main:hover {
+        background: #fff;
+    }
+
+.products-section {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+    .products-section h2 {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background: white;
+    width: 280px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+    .product-card img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .product-card button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background: black;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+        .product-card button:hover {
+            background: #ffd700;
+            color: black;
+        }
+
+.banner {
+    background: #000;
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+    .banner h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+footer {
+    background: #111;
+    color: #aaa;
+    text-align: center;
+    padding: 20px;
+}

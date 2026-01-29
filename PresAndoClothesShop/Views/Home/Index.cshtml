@@ -1,8 +1,57 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "PresAndo – Начало";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!-- HERO SECTION -->
+<header class="hero">
+    <nav class="navbar">
+        <div class="logo">PresAndo</div>
+        <ul class="nav-links">
+            <li><a href="/">Начало</a></li>
+            <li><a href="#">Жени</a></li>
+            <li><a href="#">Мъже</a></li>
+            <li><a href="#">Аксесоари</a></li>
+            <li><a href="/Home/Privacy">Поверителност</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero-content">
+        <h1>Стилът започва от PresAndo</h1>
+        <p>Открий най-новите модни тенденции за сезона</p>
+        <a href="#" class="btn-main">Разгледай колекцията</a>
+    </div>
+</header>
+
+<!-- PRODUCTS -->
+<section class="products-section">
+    <h2>Най-продавани продукти</h2>
+
+    <div class="products">
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab" alt="Дамско яке">
+            <h3>Дамско яке</h3>
+            <p>89.99 лв</p>
+            <button>Купи</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b" alt="Мъжка тениска">
+            <h3>Мъжка тениска</h3>
+            <p>29.99 лв</p>
+            <button>Купи</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1520975918318-3e8c5f69f84e" alt="Дамска рокля">
+            <h3>Дамска рокля</h3>
+            <p>59.99 лв</p>
+            <button>Купи</button>
+        </div>
+    </div>
+</section>
+
+<!-- BANNER -->
+<section class="banner">
+    <h2>Нова колекция Пролет 2026</h2>
+    <a href="#" class="btn-main">Виж повече</a>
+</section>
