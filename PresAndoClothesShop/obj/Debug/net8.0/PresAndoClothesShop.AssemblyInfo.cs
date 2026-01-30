@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PresAndoClothesShop")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c53054933d4c030c4ba3f5fbb590391620a20cae")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e596f3d15f6d7e0527fa1dd7684d64b46036e18")]
 [assembly: System.Reflection.AssemblyProductAttribute("PresAndoClothesShop")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PresAndoClothesShop")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
