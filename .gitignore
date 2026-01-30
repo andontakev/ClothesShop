@@ -1,0 +1,39 @@
+# Visual Studio cache
+.vs/
+
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+
+# ASP.NET temporary files
+*.dbmdl
+*.jfm
+
+# Logs
+*.log
+
+# NuGet packages
+packages/
+*.nupkg
+
+# Resharper / Rider
+_ReSharper*/
+*.DotSettings.user
+
+# Backup & temp files
+*.tmp
+*.bak
+*.cache
+*.swp
+
+# Publish output
+publish/
