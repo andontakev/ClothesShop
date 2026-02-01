@@ -1,3 +1,6 @@
+﻿using Microsoft.EntityFrameworkCore;
+using PresAndoClothesShop.Data;
+
 namespace PresAndoClothesShop
 {
     public class Program
@@ -8,6 +11,8 @@ namespace PresAndoClothesShop
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddDbContext<ClothesShopContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("ClothesShopContext")));
 
             var app = builder.Build();
 

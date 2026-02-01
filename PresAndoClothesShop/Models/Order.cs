@@ -11,8 +11,8 @@ namespace PresAndoClothesShop.Models
         /// </summary>
         [Key, Display(Name = "Номер на поръчката")]
         public int Id { get; set; }
-        public Customer Customer { get; set; }
-        public List<Product> Products { get; set; }
+        public virtual Customer Customer { get; set; }
+        public virtual List<Product> Products { get; set; }
         /// <summary>
         /// Дата на поръчката
         /// </summary>
