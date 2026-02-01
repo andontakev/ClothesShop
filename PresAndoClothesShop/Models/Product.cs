@@ -29,6 +29,7 @@ namespace PresAndoClothesShop.Models
         /// </summary>
         [Required(ErrorMessage = "Моля изберете категория."), Display(Name = "Категория")]
         public int CategoryId { get; set; }
+        [Display(Name = "Категория")]
         public virtual Category Category { get; set; }
         /// <summary>
         /// Размер

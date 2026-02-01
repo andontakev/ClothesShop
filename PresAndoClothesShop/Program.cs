@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PresAndoClothesShop.Data;
+using PresAndoClothesShop.Models;
 
 namespace PresAndoClothesShop
 {
@@ -13,6 +14,14 @@ namespace PresAndoClothesShop
             builder.Services.AddControllersWithViews();
             builder.Services.AddDbContext<ClothesShopContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("ClothesShopContext")));
+            builder.Services.AddScoped<Cart>(sp => Cart.GetCart(sp));
+            builder.Services.AddDistributedMemoryCache();
+            builder.Services.AddSession(options =>
+            {
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+                //options.IdleTimeout = TimeSpan.FromSeconds(10);
+            });
 
             var app = builder.Build();
 
@@ -30,6 +39,7 @@ namespace PresAndoClothesShop
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseSession();
 
             app.MapControllerRoute(
                 name: "default",
