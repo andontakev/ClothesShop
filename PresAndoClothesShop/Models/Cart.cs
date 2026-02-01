@@ -23,11 +23,11 @@ namespace PresAndoClothesShop.Models
 
         public List<CartItem> GetAllCartItems()
         {
-            return CartItems ??
+            return new List<CartItem>(); /* CartItems ??
                 (CartItems = _context.CartItems
                 .Where(ci => ci.CartId == Id)
                 .Include(ci => ci.Product)
-                .ToList());
+                .ToList());*/
         }
     }
 }
