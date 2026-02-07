@@ -1,9 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using PresAndoClothesShop.Models;
 namespace PresAndoClothesShop.Data
 
 {
-    public class ClothesShopContext : DbContext
+    public class ClothesShopContext : IdentityDbContext<DefaultUser>
     {
         public ClothesShopContext(DbContextOptions<ClothesShopContext> options) : base(options)
         {

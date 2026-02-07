@@ -1,0 +1,65 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using PresAndoClothesShop.Data;
+using PresAndoClothesShop.Models;
+
+namespace PresAndoClothesShop.Controllers
+{
+    public class OrderController : Controller
+    {
+        private readonly ClothesShopContext _context;
+        private readonly Cart _cart;
+        public OrderController(ClothesShopContext context, Cart cart)
+        {
+            _context = context;
+            _cart = cart;
+        }
+        public IActionResult CheckOut()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult CheckOut(Order order)
+        {
+            var cartItems = _cart.GetAllCartItems();
+            _cart.CartItems = cartItems;
+            if (_cart.CartItems.Count == 0)
+            {
+                ModelState.AddModelError("", "Количката е празна, добавете продукти.");
+            }
+            if (ModelState.IsValid)
+            {
+                CreateOrder(order);
+                _cart.ClearCart();
+                return View("ChechoutComplete", order);
+            }
+            return View(order);
+        }
+
+        public IActionResult ChechoutComplete(Order order)
+        {
+            return View(order);
+        }
+        public void CreateOrder(Order order)
+        {
+            order.OrderDate = DateTime.Now;
+            _context.Orders.Add(order);
+            _context.SaveChanges();
+            var cartItems = _cart.CartItems;
+            foreach (var item in cartItems)
+            {
+                var orderItem = new OrderItem()
+                {
+                    OrderId = order.Id,
+                    ProductId = item.Product.Id,
+                    Quantity = item.Quantity,
+                    Price = item.Product.Price * item.Quantity
+                };
+                order.OrderItems.Add(orderItem);
+                order.Total += orderItem.Price;
+            }
+            _context.Orders.Add(order);
+            _context.SaveChanges();
+        }
+    }
+}

@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PresAndoClothesShop.Data;
 using PresAndoClothesShop.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace PresAndoClothesShop
 {
@@ -12,8 +13,12 @@ namespace PresAndoClothesShop
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddRazorPages();
             builder.Services.AddDbContext<ClothesShopContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("ClothesShopContext")));
+
+            builder.Services.AddDefaultIdentity<DefaultUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ClothesShopContext>();
+            builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             builder.Services.AddScoped<Cart>(sp => Cart.GetCart(sp));
             builder.Services.AddDistributedMemoryCache();
             builder.Services.AddSession(options =>
@@ -37,6 +42,7 @@ namespace PresAndoClothesShop
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseAuthentication();
 
             app.UseAuthorization();
             app.UseSession();
@@ -44,6 +50,7 @@ namespace PresAndoClothesShop
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
+            app.MapRazorPages();
 
             app.Run();
         }
