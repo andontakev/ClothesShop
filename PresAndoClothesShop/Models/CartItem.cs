@@ -15,6 +15,10 @@ namespace PresAndoClothesShop.Models
         /// </summary>
         public string CartId { get; set; }
         /// <summary>
+        /// Количката
+        /// </summary>
+        public virtual Cart Cart { get; set; }
+        /// <summary>
         /// Номер на продукта
         /// </summary>
         public int ProductId { get; set; }

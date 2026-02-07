@@ -11,7 +11,7 @@ namespace PresAndoClothesShop.Models
             _context = context;
         }
         public string Id { get; set; }
-        public List<CartItem> CartItems { get; set; }
+        public virtual List<CartItem> CartItems { get; set; }
         public static Cart GetCart(IServiceProvider service)
         {
             ISession session = service.GetRequiredService<IHttpContextAccessor>()?.HttpContext.Session;
@@ -93,13 +93,13 @@ namespace PresAndoClothesShop.Models
         }
         public List<CartItem> GetAllCartItems()
         {
-            return new List<CartItem>(); /* CartItems ??
+            return CartItems ??
                 (CartItems = _context.CartItems
                 .Where(ci => ci.CartId == Id)
                 .Include(ci => ci.Product)
-                .ToList());*/
+                .ToList());
         }
-        public int GetCartTotal()
+        public decimal GetCartTotal()
         {
             return _context.CartItems
                 .Where(ci => ci.CartId == Id)
