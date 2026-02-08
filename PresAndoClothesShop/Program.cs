@@ -2,6 +2,8 @@
 using PresAndoClothesShop.Data;
 using PresAndoClothesShop.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 namespace PresAndoClothesShop
 {
@@ -51,6 +53,21 @@ namespace PresAndoClothesShop
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
             app.MapRazorPages();
+
+            // Seed roles and admin user before the app starts handling requests.
+            using (var scope = app.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+                try
+                {
+                    UserRoleInitializer.InitializeAsync(services).Wait();
+                }
+                catch (Exception ex)
+                {
+                    var logger = services.GetRequiredService<ILogger<Program>>();
+                    logger.LogError(ex, "An error occurred seeding the database.");
+                }
+            }
 
             app.Run();
         }

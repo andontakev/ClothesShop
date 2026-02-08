@@ -11,7 +11,7 @@ using PresAndoClothesShop.Models;
 
 namespace PresAndoClothesShop.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Администратор")]
     public class ProductsController : Controller
     {
         private readonly ClothesShopContext _context;

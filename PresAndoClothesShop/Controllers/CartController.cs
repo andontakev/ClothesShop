@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using PresAndoClothesShop.Data;
 using PresAndoClothesShop.Models;
 
 namespace PresAndoClothesShop.Controllers
 {
+    [Authorize]
     public class CartController : Controller
     {
         private readonly ClothesShopContext _context;
