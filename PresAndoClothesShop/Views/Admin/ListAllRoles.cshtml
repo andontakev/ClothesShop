@@ -1,0 +1,36 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model IEnumerable<IdentityRole>
+
+@{
+    ViewData["Title"] = "Всички роли";
+}
+
+<h1>Всички роли</h1>
+
+<a class="btn btn-primary mb-2" asp-action="CreateRole">Добави роля</a>
+
+@if (Model.Any())
+{
+    <table class="table col-3">
+        <thead>
+            <tr>
+                <td><h5>Роля</h5></td>
+                <td></td>
+            </tr>
+        </thead>
+        @foreach (var role in Model)
+        {
+            <tbody>
+                <tr>
+                    <td>@role.Name</td>
+                    <td class="text-center">
+                        <a asp-action="EditRole" asp-route-id="@role.Id" class="btn btn-primary btn-sm">Редактирай</a>
+                        <a class="btn btn-danger">Изтрий</a>
+                    </td>
+                </tr>
+            </tbody>   
+        }
+    </table>
+}
+else
+{}

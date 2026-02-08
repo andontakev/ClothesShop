@@ -49,7 +49,7 @@ namespace PresAndoClothesShop.Areas.Identity.Pages.Account
         {
             if (email == null)
             {
-                return RedirectToPage("/Index");
+                return RedirectToPage("/ListAllRoles");
             }
             returnUrl = returnUrl ?? Url.Content("~/");
 

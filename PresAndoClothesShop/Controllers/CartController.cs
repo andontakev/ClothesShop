@@ -26,7 +26,7 @@ namespace PresAndoClothesShop.Controllers
             {
                 _cart.AddToCart(selectedProduct, 1);
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("ListAllRoles");
         }
         public IActionResult RemoveFromCart(int id)
         {
@@ -35,7 +35,7 @@ namespace PresAndoClothesShop.Controllers
             {
                 _cart.RemoveFromCart(selectedProduct);
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("ListAllRoles");
         }
         public IActionResult IncreaseQuantity(int id)
         {
@@ -44,12 +44,12 @@ namespace PresAndoClothesShop.Controllers
             {
                 _cart.IncreaseQuantity(selectedProduct);
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("ListAllRoles");
         }
         public IActionResult ClearCart()
         {
             _cart.ClearCart();
-            return RedirectToAction("Index");
+            return RedirectToAction("ListAllRoles");
         }
         public Product GetProductById(int id)
         { 

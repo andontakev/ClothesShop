@@ -17,7 +17,7 @@ namespace PresAndoClothesShop
             builder.Services.AddDbContext<ClothesShopContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("ClothesShopContext")));
 
-            builder.Services.AddDefaultIdentity<DefaultUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ClothesShopContext>();
+            builder.Services.AddDefaultIdentity<DefaultUser>().AddRoles<IdentityRole>().AddEntityFrameworkStores<ClothesShopContext>();
             builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             builder.Services.AddScoped<Cart>(sp => Cart.GetCart(sp));
             builder.Services.AddDistributedMemoryCache();

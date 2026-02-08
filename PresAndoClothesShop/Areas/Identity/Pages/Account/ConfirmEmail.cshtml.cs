@@ -34,7 +34,7 @@ namespace PresAndoClothesShop.Areas.Identity.Pages.Account
         {
             if (userId == null || code == null)
             {
-                return RedirectToPage("/Index");
+                return RedirectToPage("/ListAllRoles");
             }
 
             var user = await _userManager.FindByIdAsync(userId);
