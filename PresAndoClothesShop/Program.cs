@@ -4,6 +4,8 @@ using PresAndoClothesShop.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using PresAndoClothesShop.Services;
 
 namespace PresAndoClothesShop
 {
@@ -19,7 +21,8 @@ namespace PresAndoClothesShop
             builder.Services.AddDbContext<ClothesShopContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("ClothesShopContext")));
 
-            builder.Services.AddDefaultIdentity<DefaultUser>().AddRoles<IdentityRole>().AddEntityFrameworkStores<ClothesShopContext>();
+            builder.Services.AddDefaultIdentity<DefaultUser>(option => option.SignIn.RequireConfirmedAccount = true).AddRoles<IdentityRole>().AddEntityFrameworkStores<ClothesShopContext>();
+            builder.Services.AddTransient<IEmailSender, EmailSender>();
             builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             builder.Services.AddScoped<Cart>(sp => Cart.GetCart(sp));
             builder.Services.AddDistributedMemoryCache();
