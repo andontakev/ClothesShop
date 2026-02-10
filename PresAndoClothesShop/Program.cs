@@ -18,6 +18,12 @@ namespace PresAndoClothesShop
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             builder.Services.AddRazorPages();
+            builder.Services.AddAuthentication().AddGoogle(options =>
+            {
+                IConfigurationSection googleAuthNSection = builder.Configuration.GetSection("Authentication:Google");
+                options.ClientId = googleAuthNSection["ClientId"];
+                options.ClientSecret = googleAuthNSection["ClientSecret"];
+            });
             builder.Services.AddDbContext<ClothesShopContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("ClothesShopContext")));
 

@@ -156,5 +156,34 @@ namespace PresAndoClothesShop.Controllers
             }
             return RedirectToAction("EditRole", new { Id = id });
         }
+        [HttpGet]
+        public async Task<IActionResult> DeleteRole(string id)
+        {
+            var role = await _roleManager.FindByIdAsync(id);
+            return View(role);
+        }
+        [HttpPost]
+        public async Task<IActionResult> ConfirmDelete(string id)
+        {
+            var role = await _roleManager.FindByIdAsync(id);
+            if (role == null)
+            {
+                ViewData["ErrorMessage"] = $"Роля с Id = {id} няма";
+                return View("Error");
+            }
+            else
+            {
+                var result = await _roleManager.DeleteAsync(role);
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("ListAllRoles");
+                }
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
+                return View("DeleteRole", role);
+            }
+        }
     }
 }

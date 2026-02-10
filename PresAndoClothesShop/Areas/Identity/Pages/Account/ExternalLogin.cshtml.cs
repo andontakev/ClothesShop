@@ -78,13 +78,34 @@ namespace PresAndoClothesShop.Areas.Identity.Pages.Account
         /// </summary>
         public class InputModel
         {
+            [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "Име")]
+            public string FirstName { get; set; }
+
+            [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "Фамилия")]
+            public string LastName { get; set; }
+
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
             [Required]
             [EmailAddress]
+            [Display(Name = "Email")]
             public string Email { get; set; }
+
+            [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "Адрес")]
+            public string Address { get; set; }
+
+            [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "Град")]
+            public string City { get; set; }
         }
         
         public IActionResult OnGet() => RedirectToPage("./Login");
@@ -130,9 +151,12 @@ namespace PresAndoClothesShop.Areas.Identity.Pages.Account
                 ProviderDisplayName = info.ProviderDisplayName;
                 if (info.Principal.HasClaim(c => c.Type == ClaimTypes.Email))
                 {
+                    var names = info.Principal.FindFirstValue(ClaimTypes.Email).Split(' ');
                     Input = new InputModel
                     {
-                        Email = info.Principal.FindFirstValue(ClaimTypes.Email)
+                        Email = info.Principal.FindFirstValue(ClaimTypes.Name)
+                        FirstName = names[0],
+                        LastName = names[1]
                     };
                 }
                 return Page();
@@ -156,6 +180,10 @@ namespace PresAndoClothesShop.Areas.Identity.Pages.Account
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
+                    user.FirstName = Input.FirstName;
+                    user.LastName = Input.LastName;
+                    user.Address = Input.Address;
+                    user.City = Input.City;
 
                 var result = await _userManager.CreateAsync(user);
                 if (result.Succeeded)
