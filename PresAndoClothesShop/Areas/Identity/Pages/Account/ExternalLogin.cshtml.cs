@@ -154,7 +154,7 @@ namespace PresAndoClothesShop.Areas.Identity.Pages.Account
                     var names = info.Principal.FindFirstValue(ClaimTypes.Email).Split(' ');
                     Input = new InputModel
                     {
-                        Email = info.Principal.FindFirstValue(ClaimTypes.Name)
+                        Email = info.Principal.FindFirstValue(ClaimTypes.Name),
                         FirstName = names[0],
                         LastName = names[1]
                     };
