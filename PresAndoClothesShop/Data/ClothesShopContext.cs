@@ -8,7 +8,7 @@ namespace PresAndoClothesShop.Data
     {
         public ClothesShopContext(DbContextOptions<ClothesShopContext> options) : base(options)
         {
-           
+           Database.EnsureCreated();
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
