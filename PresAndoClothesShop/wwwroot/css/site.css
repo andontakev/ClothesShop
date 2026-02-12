@@ -762,4 +762,23 @@ footer {
         color: #111;
         font-size: 22px;
     }
+/* Унифициран стил за всички линкове в менюто */
+.nav__links a {
+    color: var(--text-dark) !important;
+    font-weight: 600;
+    text-decoration: none;
+}
+    .nav__links a.btn-auth {
+        background: var(--text-dark);
+        color: var(--white) !important;
+        padding: 8px 18px;
+        border-radius: 6px;
+        margin-left: 10px;
+        font-weight: 600;
+    }
+
+        .nav__links a.btn-auth:hover {
+            background: var(--primary-color);
+            color: var(--text-dark) !important;
+        }
 
