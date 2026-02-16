@@ -1,73 +1,81 @@
-﻿<!DOCTYPE html>
+@using Microsoft.AspNetCore.Identity
+@using PresAndoClothesShop.Models
+@inject SignInManager<DefaultUser> SignInManager
+@inject UserManager<DefaultUser> UserManager
+@inject PresAndoClothesShop.Models.Cart CartService
+@{
+    var cartItemCount = CartService.GetAllCartItems().Sum(ci => ci.Quantity);
+    var currentUser = SignInManager.IsSignedIn(User) ? await UserManager.GetUserAsync(User) : null;
+    var displayName = currentUser == null ? string.Empty : $"{currentUser.FirstName} {currentUser.LastName}".Trim();
+    if (string.IsNullOrWhiteSpace(displayName))
+    {
+        displayName = "Потребител";
+    }
+}
+<!DOCTYPE html>
 <html lang="bg">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - PresAndoClothesShop</title>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/PresAndoClothesShop.styles.css" asp-append-version="true" />
 </head>
 
 <body>
-    <header>
+    <header class="site-header">
         <nav>
             <div class="nav__header">
                 <div class="nav__logo">
-                    <a href="#">PresAndo Clothes</a>
+                    <a asp-controller="Home" asp-action="Index">PresAndo Clothes</a>
                 </div>
                 <div class="nav__menu__btn" id="menu-btn">
                     <i class="ri-menu-line"></i>
                 </div>
             </div>
             <ul class="nav__links" id="nav-links">
-                <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Index">Home</a></li>
-                <li><a href="#catalogue">Catalogue</a></li>
-                <li><a href="#fashion">Fashion</a></li>
-                <li><a href="#favourite">Favourite</a></li>
-                <li><a href="#lifestyle">Lifestyle</a></li>
-                <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Privacy">Privacy</a></li>
-                <li><a asp-area="Identity" asp-page="/Account/Register" class="register-link">Register</a></li>
-                <li><a asp-area="Identity" asp-page="/Account/Login" class="login-link">Login</a></li>
+                <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Index">Начало</a></li>
+                <li><a href="#catalogue">Каталог</a></li>
+                <li><a href="#fashion">PresAndo Clothes</a></li>
+                <li><a href="#favourite">Любими</a></li>
+                <li><a href="#lifestyle">Стил</a></li>
+                <li class="nav-item"><a class="nav-link" asp-controller="Products" asp-action="Index">Продукти</a></li>
+                <li class="nav-item">
+                    <a class="nav-link nav-cart-link" asp-controller="Cart" asp-action="Index" title="Количка">
+                        <i class="ri-shopping-cart-2-line nav-icon"></i>
+                        <span>Количка</span>
+                        @if (cartItemCount > 0)
+                        {
+                            <span class="cart-count">@cartItemCount</span>
+                        }
+                    </a>
+                </li>
 
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    <li class="nav-item">
+                        <a class="nav-link auth-user" asp-area="Identity" asp-page="/Account/Manage/Index">
+                            Профил: @displayName
+                        </a>
+                    </li>
+                }
+                else
+                {
+                    <li><a asp-area="Identity" asp-page="/Account/Register" class="btn-auth">Регистрация</a></li>
+                    <li><a asp-area="Identity" asp-page="/Account/Login" class="btn-auth">Вход</a></li>
+                }
             </ul>
         </nav>
-       @*  <nav class="navbar navbar-expand-sm navbar-light main-nav">
-            <div class="container-fluid">
-                <a class="navbar-brand logo-text" asp-area="" asp-controller="Home" asp-action="Index">PresAndo</a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1 nav-links-layout">
-                        <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Index">Начало</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Жени</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Мъже</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Аксесоари</a></li>
-                        <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Privacy">Поверителност</a></li>
-                    </ul>
-
-                    <partial name="_LoginPartial" />
-                </div>
-            </div>
-        </nav> *@
     </header>
-
 
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
-
-    <footer class="footer-custom">
-        <div class="container">
-            &copy; 2026 - PresAndoClothesShop
-        </div>
-    </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

@@ -1,71 +1,69 @@
-﻿@model IEnumerable<PresAndoClothesShop.Models.Product>
+@model IEnumerable<PresAndoClothesShop.Models.Product>
 
 @{
-    ViewData["Title"] = "ListAllRoles";
+    ViewData["Title"] = "Продукти";
+    var returnUrl = Context.Request.Path + Context.Request.QueryString;
+    var isAdmin = User.IsInRole("Администратор");
 }
 
-<h1>Index</h1>
+<section class="products-page">
+    <div class="products-header">
+        <div>
+            <h1>Продукти</h1>
+            <p>Открий перфектната визия от PresAndo Clothes.</p>
+        </div>
+        @if (isAdmin)
+        {
+            <a class="shop-btn shop-btn-primary" asp-action="Create">
+                <i class="ri-add-circle-line"></i>
+                <span>Нов продукт</span>
+            </a>
+        }
+    </div>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Price)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Category)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Size)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Color)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ImageUrl)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Category.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Size)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Color)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ImageUrl)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <div class="products-grid">
+        @foreach (var item in Model)
+        {
+            <article class="product-card">
+                <div class="product-image-wrap">
+                    <img src="@item.ImageUrl" alt="@item.Name" class="product-image" />
+                    <span class="product-category">@item.Category?.Name</span>
+                </div>
+
+                <div class="product-body">
+                    <h3>@item.Name</h3>
+                    <p>@item.Description</p>
+                    <div class="product-meta">
+                        <span><i class="ri-ruler-line"></i> @item.Size</span>
+                        <span><i class="ri-palette-line"></i> @item.Color</span>
+                    </div>
+                </div>
+
+                <div class="product-footer">
+                    <div class="product-price">@item.Price.ToString("C")</div>
+                    <div class="product-actions">
+                        <a class="icon-btn" asp-action="Details" asp-route-id="@item.Id" title="Детайли">
+                            <i class="ri-eye-line"></i>
+                        </a>
+                        @if (isAdmin)
+                        {
+                            <a class="icon-btn" asp-action="Edit" asp-route-id="@item.Id" title="Редакция">
+                                <i class="ri-edit-line"></i>
+                            </a>
+                            <a class="icon-btn icon-btn-danger" asp-action="Delete" asp-route-id="@item.Id" title="Изтриване">
+                                <i class="ri-delete-bin-6-line"></i>
+                            </a>
+                        }
+                        <form asp-controller="Cart" asp-action="AddToCart" asp-route-id="@item.Id" asp-route-returnUrl="@returnUrl" method="post">
+                            @Html.AntiForgeryToken()
+                            <button class="shop-btn shop-btn-dark" type="submit">
+                                <i class="ri-shopping-bag-3-line"></i>
+                                <span>Добави</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </article>
+        }
+    </div>
+</section>
