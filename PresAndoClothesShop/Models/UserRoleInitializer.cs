@@ -45,34 +45,106 @@ namespace PresAndoClothesShop.Models
                 }
             }
 
-            await EnsureTestDressAsync(context);
+            await EnsureTestProductsAsync(context);
         }
 
-        private static async Task EnsureTestDressAsync(ClothesShopContext context)
+        private static async Task EnsureTestProductsAsync(ClothesShopContext context)
         {
-            var dressCategory = await context.Categories.FirstOrDefaultAsync(c => c.Name == "Dresses");
-            if (dressCategory == null)
+            var dressesCategory = await GetOrCreateCategoryAsync(context, "Рокли");
+            var tshirtsCategory = await GetOrCreateCategoryAsync(context, "Тениски");
+            var jacketsCategory = await GetOrCreateCategoryAsync(context, "Якета");
+            var pantsCategory = await GetOrCreateCategoryAsync(context, "Панталони");
+
+            var oldDress = await context.Products.FirstOrDefaultAsync(p => p.Name == "Summer Floral Dress");
+            if (oldDress != null)
             {
-                dressCategory = new Category { Name = "Dresses" };
-                context.Categories.Add(dressCategory);
-                await context.SaveChangesAsync();
+                oldDress.Name = "Лятна флорална рокля";
+                oldDress.Description = "Елегантна рокля за ежедневно носене и специални поводи.";
+                oldDress.Price = 79.99m;
+                oldDress.CategoryId = dressesCategory.Id;
+                oldDress.Size = "M";
+                oldDress.Color = "Син";
+                oldDress.ImageUrl = "/assets/dress.jpg";
             }
 
-            var hasDress = await context.Products.AnyAsync(p => p.Name == "Summer Floral Dress");
-            if (!hasDress)
+            await AddProductIfMissingAsync(context, new Product
             {
-                context.Products.Add(new Product
-                {
-                    Name = "Summer Floral Dress",
-                    Description = "Test product dress for cart and checkout flows.",
-                    Price = 79.99m,
-                    CategoryId = dressCategory.Id,
-                    Size = "M",
-                    Color = "Blue",
-                    ImageUrl = "/assets/dress.jpg"
-                });
+                Name = "Лятна флорална рокля",
+                Description = "Елегантна рокля за ежедневно носене и специални поводи.",
+                Price = 79.99m,
+                CategoryId = dressesCategory.Id,
+                Size = "M",
+                Color = "Син",
+                ImageUrl = "/assets/dress.jpg"
+            });
 
-                await context.SaveChangesAsync();
+            await AddProductIfMissingAsync(context, new Product
+            {
+                Name = "Кожено яке Urban",
+                Description = "Класическо кожено яке с модерен силует.",
+                Price = 129.90m,
+                CategoryId = jacketsCategory.Id,
+                Size = "L",
+                Color = "Черен",
+                ImageUrl = "/assets/leather-jacket.jpg"
+            });
+
+            await AddProductIfMissingAsync(context, new Product
+            {
+                Name = "Бяла тениска Basic",
+                Description = "Мека памучна тениска за ежедневен комфорт.",
+                Price = 24.50m,
+                CategoryId = tshirtsCategory.Id,
+                Size = "M",
+                Color = "Бял",
+                ImageUrl = "/assets/white-tshirt.png"
+            });
+
+            await AddProductIfMissingAsync(context, new Product
+            {
+                Name = "Дънки Slim Fit",
+                Description = "Модерни дънки със стеснен силует и висока еластичност.",
+                Price = 64.00m,
+                CategoryId = pantsCategory.Id,
+                Size = "32",
+                Color = "Тъмносин",
+                ImageUrl = "/assets/arrival-2.jpg"
+            });
+
+            await AddProductIfMissingAsync(context, new Product
+            {
+                Name = "Худи Street Vibe",
+                Description = "Топло худи с качулка и минималистичен дизайн.",
+                Price = 49.00m,
+                CategoryId = tshirtsCategory.Id,
+                Size = "L",
+                Color = "Сив",
+                ImageUrl = "/assets/arrival-1.jpg"
+            });
+
+            await context.SaveChangesAsync();
+        }
+
+        private static async Task<Category> GetOrCreateCategoryAsync(ClothesShopContext context, string categoryName)
+        {
+            var category = await context.Categories.FirstOrDefaultAsync(c => c.Name == categoryName);
+            if (category != null)
+            {
+                return category;
+            }
+
+            category = new Category { Name = categoryName };
+            context.Categories.Add(category);
+            await context.SaveChangesAsync();
+            return category;
+        }
+
+        private static async Task AddProductIfMissingAsync(ClothesShopContext context, Product product)
+        {
+            var exists = await context.Products.AnyAsync(p => p.Name == product.Name);
+            if (!exists)
+            {
+                context.Products.Add(product);
             }
         }
     }
