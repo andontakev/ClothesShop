@@ -11,7 +11,8 @@ using PresAndoClothesShop.Models;
 
 namespace PresAndoClothesShop.Controllers
 {
-    [Authorize(Roles = "Администратор")]
+    // Require authentication for controller actions by default
+    [Authorize]
     public class ProductsController : Controller
     {
         private readonly ClothesShopContext _context;
@@ -30,7 +31,7 @@ namespace PresAndoClothesShop.Controllers
         }
 
         // GET: Products/Details/5
-        
+        // No attribute: inherits [Authorize] from controller -> available to any authenticated user (not anonymous)
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -50,6 +51,7 @@ namespace PresAndoClothesShop.Controllers
         }
 
         // GET: Products/Create
+        [Authorize(Roles = "Администратор")]
         public IActionResult Create()
         {
             ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name");
@@ -57,10 +59,9 @@ namespace PresAndoClothesShop.Controllers
         }
 
         // POST: Products/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Администратор")]
         public async Task<IActionResult> Create([Bind("Id,Name,Description,Price,CategoryId,Size,Color,ImageUrl")] Product product)
         {
             if (ModelState.IsValid)
@@ -74,6 +75,7 @@ namespace PresAndoClothesShop.Controllers
         }
 
         // GET: Products/Edit/5
+        [Authorize(Roles = "Администратор")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -91,10 +93,9 @@ namespace PresAndoClothesShop.Controllers
         }
 
         // POST: Products/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Администратор")]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,Price,CategoryId,Size,Color,ImageUrl")] Product product)
         {
             if (id != product.Id)
@@ -127,6 +128,7 @@ namespace PresAndoClothesShop.Controllers
         }
 
         // GET: Products/Delete/5
+        [Authorize(Roles = "Администратор")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -148,6 +150,7 @@ namespace PresAndoClothesShop.Controllers
         // POST: Products/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Администратор")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var product = await _context.Products.FindAsync(id);

@@ -1,4 +1,4 @@
-@model PresAndoClothesShop.Models.Product
+﻿@model PresAndoClothesShop.Models.Product
 
 @{
     ViewData["Title"] = "Детайли";
@@ -38,6 +38,9 @@
         @Html.AntiForgeryToken()
         <button class="btn btn-primary" type="submit">Добави в количката</button>
     </form>
-    <a class="btn btn-outline-secondary" asp-action="Edit" asp-route-id="@Model.Id">Редакция</a>
+    @if (User.IsInRole("Администратор"))
+    {
+        <a class="btn btn-outline-secondary" asp-action="Edit" asp-route-id="@Model.Id">Редакция</a>
+    }
     <a class="btn btn-outline-secondary" asp-action="Index">Назад към списъка</a>
 </div>
