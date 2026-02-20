@@ -25,7 +25,7 @@ namespace PresAndoClothesShop.Models
         /// <summary>
         /// Статус на поръчката
         /// </summary>
-        [Required, Display(Name = "Статус на поръчката")]
-        public string Status { get; set; }
+        [Display(Name = "Статус на поръчката")]
+        public string? Status { get; set; }
     }
 }

@@ -1,0 +1,17 @@
+﻿@model Order
+@{
+    ViewData["Title"] = "Поръчка";
+}
+
+
+<form asp-action="CheckOut" method="post" class="form-horizontal" role="form">
+    <h4>Моля, потвърдете поръчката!</h4>
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-5">
+            <input type="submit" class="btn btn-primary" value="Complete Order" />
+        </div>
+    </div>
+</form>
+

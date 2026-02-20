@@ -1,4 +1,4 @@
-@model PresAndoClothesShop.Models.Cart
+﻿@model PresAndoClothesShop.Models.Cart
 
 @{
     ViewData["Title"] = "Количка";
@@ -73,5 +73,6 @@ else
             <button class="btn btn-outline-danger" type="submit">Изчисти количката</button>
         </form>
         <a class="btn btn-primary" asp-controller="Products" asp-action="Index">Продължи пазаруването</a>
+        <a class="btn btn-success" asp-controller="Order" asp-action="CheckOut">Поръчай</a>
     </div>
 }

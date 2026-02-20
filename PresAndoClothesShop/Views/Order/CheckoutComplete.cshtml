@@ -1,0 +1,44 @@
+﻿@model Order
+<h1>Благодарим за поръчката!</h1>
+
+<h5 class="mt-5">Order Id: @Model.Id</h5>
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Продукт</th>
+            <th>Цена</th>
+            <th>Количество</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.OrderItems)
+        {
+            var itemTotal = item.Product.Price * item.Quantity;
+            <tr>
+                <td>
+                    <a class="a-cleanup" asp-controller="Store" asp-action="Details" asp-route-id="@item.Id"><img src="@item.Product.ImageUrl" style="align-content"></a>
+                </td>
+                <td>
+                    <a class="a-cleanup" asp-controller="Store" asp-action="Details" asp-route-id="@item.Id">@item.Product.Name</a>
+                </td>
+                <td>
+                    @itemTotal.ToString("c")
+                </td>
+                <td>
+                    @item.Quantity
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+    <td></td>
+    <td class="text-right">
+        <strong>Total:</strong>
+    </td>
+    <td>
+        <strong>@Model?.Total.ToString("c")</strong>
+    </td>
+    <td></td>
+    </tfoot>
+</table>

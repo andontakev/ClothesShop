@@ -33,7 +33,7 @@ namespace PresAndoClothesShop.Controllers
             {
                 CreateOrder(order);
                 _cart.ClearCart();
-                return View("ChechoutComplete", order);
+                return View("CheckoutComplete", order);
             }
             return View(order);
         }
@@ -46,21 +46,23 @@ namespace PresAndoClothesShop.Controllers
         {
             order.OrderDate = DateTime.Now;
             _context.Orders.Add(order);
-            _context.SaveChanges();
+            _context.SaveChanges(); // now order.Id populated
+
             var cartItems = _cart.CartItems;
             foreach (var item in cartItems)
             {
-                var orderItem = new OrderItem()
+                var orderItem = new OrderItem
                 {
                     OrderId = order.Id,
                     ProductId = item.Product.Id,
                     Quantity = item.Quantity,
                     Price = item.Product.Price * item.Quantity
                 };
-                order.OrderItems.Add(orderItem);
+                _context.OrderItems.Add(orderItem);
                 order.Total += orderItem.Price;
             }
-            _context.Orders.Add(order);
+
+            _context.Orders.Update(order); // mark total changed, or set order.Total and _context.Entry(order).Property(o=>o.Total).IsModified = true;
             _context.SaveChanges();
         }
     }
