@@ -120,11 +120,86 @@
             {
                 Id = 1,
                 Total = 109.97m,
-                OrderDate = DateTime.Now,
-                Status = "Processing"
+                OrderDate = DateTime.Now
             };
             var expectedTotalPrice = 109.97m;
             Assert.AreEqual(expectedTotalPrice, order.Total);
+        }
+        [TestMethod]
+        public void OrderTest2()
+        {
+            var order = new PresAndoClothesShop.Models.Order
+            {
+                Id = 2,
+                Total = 59.98m,
+                OrderDate = DateTime.Now
+            };
+            var expectedId = 2;
+            Assert.AreEqual(expectedId, order.Id);
+        }
+        [TestMethod]
+        public void OrderTest3()
+        {
+            var order = new PresAndoClothesShop.Models.Order
+            {
+                Id = 3,
+                Total = 79.99m,
+                OrderDate = DateTime.Now
+            };
+            var expectedOrderDate = DateTime.Now.Date;
+            Assert.AreEqual(expectedOrderDate, order.OrderDate.Date);
+        }
+        [TestMethod]
+        public void OrderItemTest1()
+        {
+            var orderItem = new PresAndoClothesShop.Models.OrderItem
+            {
+                Id = 1,
+                OrderId = 1,
+                ProductId = 1,
+                Quantity = 2
+            };
+            var expectedOrderId = 1;
+            Assert.AreEqual(expectedOrderId, orderItem.OrderId);
+        }
+        [TestMethod]
+        public void OrderItemTest2()
+        {
+            var orderItem = new PresAndoClothesShop.Models.OrderItem
+            {
+                Id = 2,
+                OrderId = 1,
+                ProductId = 2,
+                Quantity = 1
+            };
+            var expectedProductId = 2;
+            Assert.AreEqual(expectedProductId, orderItem.ProductId);
+        }
+        [TestMethod]
+        public void OrderItemTest3()
+        {
+            var orderItem = new PresAndoClothesShop.Models.OrderItem
+            {
+                Id = 3,
+                OrderId = 2,
+                ProductId = 3,
+                Quantity = 3
+            };
+            var expectedQuantity = 3;
+            Assert.AreEqual(expectedQuantity, orderItem.Quantity);
+        }
+        [TestMethod]
+        public void OrderItemTest4()
+        {
+            var orderItem = new PresAndoClothesShop.Models.OrderItem
+            {
+                Id = 4,
+                OrderId = 2,
+                ProductId = 4,
+                Quantity = 1
+            };
+            var expectedId = 4;
+            Assert.AreEqual(expectedId, orderItem.Id);
         }
     }
 }
