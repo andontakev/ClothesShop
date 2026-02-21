@@ -458,5 +458,34 @@
             Assert.AreEqual(20m, total);
         }
 
-        
+        [TestMethod]
+        public void CategoryMultipleProductsTest()
+        {
+            var category = new PresAndoClothesShop.Models.Category
+            {
+                Id = 1,
+                Name = "Test"
+            };
+
+            var products = new List<PresAndoClothesShop.Models.Product>
+    {
+        new PresAndoClothesShop.Models.Product { CategoryId = 1 },
+        new PresAndoClothesShop.Models.Product { CategoryId = 1 }
+    };
+
+            Assert.IsTrue(products.All(p => p.CategoryId == category.Id));
+        }
+
+        [TestMethod]
+        public void ProductChangePriceTest()
+        {
+            var product = new PresAndoClothesShop.Models.Product
+            {
+                Price = 10
+            };
+
+            product.Price = 20;
+
+            Assert.AreEqual(20, product.Price);
+        }
     }
