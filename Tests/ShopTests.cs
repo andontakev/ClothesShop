@@ -215,6 +215,19 @@
             Assert.AreEqual(49.95m, orderItem.Price);
             Assert.AreEqual(2, orderItem.Quantity);
         }
+        [TestMethod]
+        public void CartItemCartIdTest()
+        {
+            var cartItem = new PresAndoClothesShop.Models.CartItem
+            {
+                Id = 40,
+                CartId = "cart-123",
+                ProductId = 7,
+                Quantity = 1
+            };
+            Assert.AreEqual("cart-123", cartItem.CartId);
+            Assert.AreEqual(1, cartItem.Quantity);
+        }
 
     }
 }
