@@ -274,3 +274,4 @@
             Assert.AreEqual(89.97m, order.Total);
         }
     }
+}

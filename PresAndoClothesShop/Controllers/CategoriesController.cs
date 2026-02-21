@@ -10,22 +10,24 @@ using PresAndoClothesShop.Models;
 
 namespace PresAndoClothesShop.Controllers
 {
+    /// <summary>Контролер за управление на категории.</summary>
     public class CategoriesController : Controller
     {
         private readonly ClothesShopContext _context;
 
+        /// <summary>Инициализира контролера.</summary>
         public CategoriesController(ClothesShopContext context)
         {
             _context = context;
         }
 
-        // GET: Categories
+        /// <summary>Показва всички категории.</summary>
         public async Task<IActionResult> Index()
         {
             return View(await _context.Categories.ToListAsync());
         }
 
-        // GET: Categories/Details/5
+        /// <summary>Показва детайли за категория.</summary>
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -43,15 +45,13 @@ namespace PresAndoClothesShop.Controllers
             return View(category);
         }
 
-        // GET: Categories/Create
+        /// <summary>Форма за създаване на категория.</summary>
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Categories/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        /// <summary>Създава нова категория.</summary>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name")] Category category)
@@ -65,7 +65,7 @@ namespace PresAndoClothesShop.Controllers
             return View(category);
         }
 
-        // GET: Categories/Edit/5
+        /// <summary>Форма за редактиране на категория.</summary>
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -81,9 +81,7 @@ namespace PresAndoClothesShop.Controllers
             return View(category);
         }
 
-        // POST: Categories/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        /// <summary>Записва редактирана категория.</summary>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Name")] Category category)
@@ -116,7 +114,7 @@ namespace PresAndoClothesShop.Controllers
             return View(category);
         }
 
-        // GET: Categories/Delete/5
+        /// <summary>Потвърждение за изтриване на категория.</summary>
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -134,7 +132,7 @@ namespace PresAndoClothesShop.Controllers
             return View(category);
         }
 
-        // POST: Categories/Delete/5
+        /// <summary>Изтрива категория.</summary>
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -149,9 +147,11 @@ namespace PresAndoClothesShop.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        /// <summary>Проверява дали категория съществува.</summary>
         private bool CategoryExists(int id)
         {
             return _context.Categories.Any(e => e.Id == id);
         }
     }
+
 }

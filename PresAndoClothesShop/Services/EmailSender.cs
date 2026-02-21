@@ -6,15 +6,18 @@ using System.Net.Mail;
 
 namespace PresAndoClothesShop.Services
 {
+    /// <summary>Изпраща имейли чрез SendGrid.</summary>
     public class EmailSender : IEmailSender
     {
         private readonly IConfiguration _config;
 
+        /// <summary>Инициализира изпращача на имейли.</summary>
         public EmailSender(IConfiguration config)
         {
             _config = config;
         }
 
+        /// <summary>Изпраща имейл асинхронно.</summary>
         public async Task SendEmailAsync(string email, string subject, string htmlMessage)
         {
             var apiKey = _config["SendGrid:ApiKey"];
@@ -29,9 +32,10 @@ namespace PresAndoClothesShop.Services
             Console.WriteLine(response.StatusCode);
             Console.WriteLine(body);
 
-            /*await client.SendEmailAsync(msg);*/
+            
         }
     }
+
 
 }
 

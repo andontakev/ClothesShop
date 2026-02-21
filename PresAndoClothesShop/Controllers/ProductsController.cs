@@ -11,18 +11,20 @@ using PresAndoClothesShop.Models;
 
 namespace PresAndoClothesShop.Controllers
 {
-    // Require authentication for controller actions by default
+
+    /// <summary>Контролер за управление на продукти.</summary>
     [Authorize]
     public class ProductsController : Controller
     {
         private readonly ClothesShopContext _context;
 
+        /// <summary>Инициализира контролера.</summary>
         public ProductsController(ClothesShopContext context)
         {
             _context = context;
         }
 
-        // GET: Products
+        /// <summary>Показва всички продукти.</summary>
         [AllowAnonymous]
         public async Task<IActionResult> Index()
         {
@@ -30,8 +32,7 @@ namespace PresAndoClothesShop.Controllers
             return View(await clothesShopContext.ToListAsync());
         }
 
-        // GET: Products/Details/5
-        // No attribute: inherits [Authorize] from controller -> available to any authenticated user (not anonymous)
+        /// <summary>Показва детайли за продукт.</summary>
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -50,7 +51,7 @@ namespace PresAndoClothesShop.Controllers
             return View(product);
         }
 
-        // GET: Products/Create
+        /// <summary>Форма за създаване на продукт.</summary>
         [Authorize(Roles = "Администратор")]
         public IActionResult Create()
         {
@@ -58,7 +59,7 @@ namespace PresAndoClothesShop.Controllers
             return View();
         }
 
-        // POST: Products/Create
+        /// <summary>Създава нов продукт.</summary>
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Администратор")]
@@ -74,7 +75,7 @@ namespace PresAndoClothesShop.Controllers
             return View(product);
         }
 
-        // GET: Products/Edit/5
+        /// <summary>Форма за редактиране на продукт.</summary>
         [Authorize(Roles = "Администратор")]
         public async Task<IActionResult> Edit(int? id)
         {
@@ -92,7 +93,7 @@ namespace PresAndoClothesShop.Controllers
             return View(product);
         }
 
-        // POST: Products/Edit/5
+        /// <summary>Записва редактиран продукт.</summary>
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Администратор")]
@@ -127,7 +128,7 @@ namespace PresAndoClothesShop.Controllers
             return View(product);
         }
 
-        // GET: Products/Delete/5
+        /// <summary>Потвърждение за изтриване на продукт.</summary>
         [Authorize(Roles = "Администратор")]
         public async Task<IActionResult> Delete(int? id)
         {
@@ -147,7 +148,7 @@ namespace PresAndoClothesShop.Controllers
             return View(product);
         }
 
-        // POST: Products/Delete/5
+        /// <summary>Изтрива продукт.</summary>
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Администратор")]
@@ -163,9 +164,11 @@ namespace PresAndoClothesShop.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        /// <summary>Проверява дали продукт съществува.</summary>
         private bool ProductExists(int id)
         {
             return _context.Products.Any(e => e.Id == id);
         }
     }
+
 }

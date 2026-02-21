@@ -3,18 +3,24 @@ using PresAndoClothesShop.Data;
 
 namespace PresAndoClothesShop.Models
 {
+    /// <summary>Модел за пазарска количка.</summary>
     public class Cart
     {
         private readonly ClothesShopContext _context;
 
+        /// <summary>Инициализира количката.</summary>
         public Cart(ClothesShopContext context)
         {
             _context = context;
         }
 
+        /// <summary>Идентификатор на количката.</summary>
         public string Id { get; set; } = string.Empty;
+
+        /// <summary>Списък с артикули в количката.</summary>
         public virtual List<CartItem> CartItems { get; set; } = new();
 
+        /// <summary>Връща количката от сесията или създава нова.</summary>
         public static Cart GetCart(IServiceProvider service)
         {
             var context = service.GetRequiredService<ClothesShopContext>();
@@ -30,21 +36,24 @@ namespace PresAndoClothesShop.Models
             return new Cart(context) { Id = cartId };
         }
 
+        /// <summary>Гарантира, че количката съществува в базата.</summary>
         private static void EnsureCartExists(ClothesShopContext context, string cartId)
         {
             context.Database.ExecuteSqlInterpolated($@"
-                IF NOT EXISTS (SELECT 1 FROM Cart WHERE Id = {cartId})
-                BEGIN
-                    INSERT INTO Cart (Id) VALUES ({cartId})
-                END");
+            IF NOT EXISTS (SELECT 1 FROM Cart WHERE Id = {cartId})
+            BEGIN
+                INSERT INTO Cart (Id) VALUES ({cartId})
+            END");
         }
 
+        /// <summary>Връща артикул от количката.</summary>
         public CartItem? GetCartItem(Product product)
         {
             return _context.CartItems
                 .SingleOrDefault(ci => ci.CartId == Id && ci.ProductId == product.Id);
         }
 
+        /// <summary>Добавя продукт в количката.</summary>
         public void AddToCart(Product product, int quantity)
         {
             var cartItem = GetCartItem(product);
@@ -67,6 +76,7 @@ namespace PresAndoClothesShop.Models
             _context.SaveChanges();
         }
 
+        /// <summary>Намалява количеството на продукт.</summary>
         public int ReduceQuantity(Product product)
         {
             var cartItem = GetCartItem(product);
@@ -90,6 +100,7 @@ namespace PresAndoClothesShop.Models
             return remainingQuantity;
         }
 
+        /// <summary>Увеличава количеството на продукт.</summary>
         public int IncreaseQuantity(Product product)
         {
             var cartItem = GetCartItem(product);
@@ -105,6 +116,7 @@ namespace PresAndoClothesShop.Models
             return newQuantity;
         }
 
+        /// <summary>Премахва продукт от количката.</summary>
         public void RemoveFromCart(Product product)
         {
             var cartItem = GetCartItem(product);
@@ -115,6 +127,7 @@ namespace PresAndoClothesShop.Models
             }
         }
 
+        /// <summary>Изчиства количката.</summary>
         public void ClearCart()
         {
             var cartItems = _context.CartItems.Where(ci => ci.CartId == Id);
@@ -122,6 +135,7 @@ namespace PresAndoClothesShop.Models
             _context.SaveChanges();
         }
 
+        /// <summary>Връща всички артикули в количката.</summary>
         public List<CartItem> GetAllCartItems()
         {
             return CartItems = _context.CartItems
@@ -130,6 +144,7 @@ namespace PresAndoClothesShop.Models
                 .ToList();
         }
 
+        /// <summary>Изчислява общата стойност на количката.</summary>
         public decimal GetCartTotal()
         {
             return _context.CartItems
@@ -138,4 +153,5 @@ namespace PresAndoClothesShop.Models
                 .Sum() ?? 0m;
         }
     }
+
 }

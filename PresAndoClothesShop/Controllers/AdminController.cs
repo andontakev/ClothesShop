@@ -6,27 +6,36 @@ using PresAndoClothesShop.ViewModel;
 
 namespace PresAndoClothesShop.Controllers
 {
+    /// <summary>Контролер за управление на роли и потребители.</summary>
     [Authorize(Roles = "Администратор")]
     public class AdminController : Controller
     {
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly UserManager<DefaultUser> _userManager;
+
+        /// <summary>Инициализира контролера.</summary>
         public AdminController(RoleManager<IdentityRole> roleManager, UserManager<DefaultUser> userManager)
         {
             _roleManager = roleManager;
             _userManager = userManager;
         }
+
+        /// <summary>Показва всички роли.</summary>
         [HttpGet]
         public IActionResult ListAllRoles()
         {
             var roles = _roleManager.Roles;
             return View(roles);
         }
+
+        /// <summary>Форма за създаване на роля.</summary>
         [HttpGet]
         public IActionResult CreateRole()
         {
             return View();
         }
+
+        /// <summary>Създава нова роля.</summary>
         [HttpPost]
         public async Task<IActionResult> CreateRole(CreateRoleViewModel model)
         {
@@ -49,6 +58,8 @@ namespace PresAndoClothesShop.Controllers
             }
             return View(model);
         }
+
+        /// <summary>Редактира роля.</summary>
         [HttpGet]
         public async Task<IActionResult> EditRole(string id)
         {
@@ -73,6 +84,7 @@ namespace PresAndoClothesShop.Controllers
             return View(model);
         }
 
+        /// <summary>Записва редактирана роля.</summary>
         [HttpPost]
         public async Task<IActionResult> EditRole(EditRoleViewModel model)
         {
@@ -98,6 +110,7 @@ namespace PresAndoClothesShop.Controllers
             }
         }
 
+        /// <summary>Редактира потребители в роля.</summary>
         [HttpGet]
         public async Task<IActionResult> EditUsersInRole(string id)
         {
@@ -129,6 +142,8 @@ namespace PresAndoClothesShop.Controllers
             }
             return View(model);
         }
+
+        /// <summary>Записва промените на потребителите в роля.</summary>
         [HttpPost]
         public async Task<IActionResult> EditUsersInRole(List<UserRoleViewModel> model, string id)
         {
@@ -156,12 +171,16 @@ namespace PresAndoClothesShop.Controllers
             }
             return RedirectToAction("EditRole", new { Id = id });
         }
+
+        /// <summary>Потвърждение за изтриване на роля.</summary>
         [HttpGet]
         public async Task<IActionResult> DeleteRole(string id)
         {
             var role = await _roleManager.FindByIdAsync(id);
             return View(role);
         }
+
+        /// <summary>Изтрива роля.</summary>
         [HttpPost]
         public async Task<IActionResult> ConfirmDelete(string id)
         {
@@ -186,4 +205,5 @@ namespace PresAndoClothesShop.Controllers
             }
         }
     }
+
 }

@@ -5,48 +5,60 @@ using PresAndoClothesShop.Models;
 
 namespace PresAndoClothesShop.Controllers
 {
+    /// <summary>Контролер за създаване и обработка на поръчки.</summary>
     [Authorize]
     public class OrderController : Controller
     {
         private readonly ClothesShopContext _context;
         private readonly Cart _cart;
+
+        /// <summary>Инициализира контролера.</summary>
         public OrderController(ClothesShopContext context, Cart cart)
         {
             _context = context;
             _cart = cart;
         }
+
+        /// <summary>Страница за финализиране на поръчка.</summary>
         public IActionResult CheckOut()
         {
             return View();
         }
 
+        /// <summary>Обработва финализиране на поръчка.</summary>
         [HttpPost]
         public IActionResult CheckOut(Order order)
         {
             var cartItems = _cart.GetAllCartItems();
             _cart.CartItems = cartItems;
+
             if (_cart.CartItems.Count == 0)
             {
                 ModelState.AddModelError("", "Количката е празна, добавете продукти.");
             }
+
             if (ModelState.IsValid)
             {
                 CreateOrder(order);
                 _cart.ClearCart();
                 return View("CheckoutComplete", order);
             }
+
             return View(order);
         }
 
+        /// <summary>Показва завършена поръчка.</summary>
         public IActionResult ChechoutComplete(Order order)
         {
             return View(order);
         }
+
+        /// <summary>Създава поръчка и добавя артикули към нея.</summary>
         public void CreateOrder(Order order)
         {
             order.OrderDate = DateTime.Now;
             _context.Orders.Add(order);
-            _context.SaveChanges(); // now order.Id populated
+            _context.SaveChanges(); 
 
             var cartItems = _cart.CartItems;
             foreach (var item in cartItems)
@@ -62,8 +74,9 @@ namespace PresAndoClothesShop.Controllers
                 order.Total += orderItem.Price;
             }
 
-            _context.Orders.Update(order); // mark total changed, or set order.Total and _context.Entry(order).Property(o=>o.Total).IsModified = true;
+            _context.Orders.Update(order);
             _context.SaveChanges();
         }
     }
+
 }
