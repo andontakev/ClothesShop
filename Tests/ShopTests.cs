@@ -228,6 +228,21 @@
             Assert.AreEqual("cart-123", cartItem.CartId);
             Assert.AreEqual(1, cartItem.Quantity);
         }
-
-    }
+        [TestMethod]
+        public void ProductCategoryTest()
+        {
+            var category = new PresAndoClothesShop.Models.Category
+            {
+                Id = 1,
+                Name = "Shirts"
+            };
+            var product = new PresAndoClothesShop.Models.Product
+            {
+                Id = 1,
+                Name = "T-Shirt",
+                Price = 19.99m,
+                CategoryId = category.Id
+            };
+            Assert.AreEqual(category.Id, product.CategoryId);
+        }
 }
