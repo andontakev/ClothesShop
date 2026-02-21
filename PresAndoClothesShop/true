@@ -1,0 +1,1294 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PresAndoClothesShop</name>
+    </assembly>
+    <members>
+        <member name="T:PresAndoClothesShop.Areas.Identity.Pages.Account.AccessDeniedModel">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Areas.Identity.Pages.Account.AccessDeniedModel.OnGet">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.ConfirmEmailModel.StatusMessage">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.ConfirmEmailChangeModel.StatusMessage">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.ExternalLoginModel.Input">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.ExternalLoginModel.ProviderDisplayName">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.ExternalLoginModel.ReturnUrl">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.ExternalLoginModel.ErrorMessage">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="T:PresAndoClothesShop.Areas.Identity.Pages.Account.ExternalLoginModel.InputModel">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.ExternalLoginModel.InputModel.Email">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.ForgotPasswordModel.Input">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="T:PresAndoClothesShop.Areas.Identity.Pages.Account.ForgotPasswordModel.InputModel">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.ForgotPasswordModel.InputModel.Email">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="T:PresAndoClothesShop.Areas.Identity.Pages.Account.ForgotPasswordConfirmation">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Areas.Identity.Pages.Account.ForgotPasswordConfirmation.OnGet">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="T:PresAndoClothesShop.Areas.Identity.Pages.Account.LockoutModel">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Areas.Identity.Pages.Account.LockoutModel.OnGet">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.LoginModel.Input">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.LoginModel.ExternalLogins">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.LoginModel.ReturnUrl">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.LoginModel.ErrorMessage">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="T:PresAndoClothesShop.Areas.Identity.Pages.Account.LoginModel.InputModel">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.LoginModel.InputModel.Email">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.LoginModel.InputModel.Password">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.LoginModel.InputModel.RememberMe">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.LoginWith2faModel.Input">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.LoginWith2faModel.RememberMe">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.LoginWith2faModel.ReturnUrl">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="T:PresAndoClothesShop.Areas.Identity.Pages.Account.LoginWith2faModel.InputModel">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.LoginWith2faModel.InputModel.TwoFactorCode">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.LoginWith2faModel.InputModel.RememberMachine">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel.Input">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel.ReturnUrl">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="T:PresAndoClothesShop.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel.InputModel">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.LoginWithRecoveryCodeModel.InputModel.RecoveryCode">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.ChangePasswordModel.Input">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.ChangePasswordModel.StatusMessage">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="T:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.ChangePasswordModel.InputModel">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.ChangePasswordModel.InputModel.OldPassword">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.ChangePasswordModel.InputModel.NewPassword">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.ChangePasswordModel.InputModel.ConfirmPassword">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.DeletePersonalDataModel.Input">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="T:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.DeletePersonalDataModel.InputModel">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.DeletePersonalDataModel.InputModel.Password">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.DeletePersonalDataModel.RequirePassword">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.Disable2faModel.StatusMessage">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.EmailModel.Email">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.EmailModel.IsEmailConfirmed">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.EmailModel.StatusMessage">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.EmailModel.Input">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="T:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.EmailModel.InputModel">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.EmailModel.InputModel.NewEmail">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.EnableAuthenticatorModel.SharedKey">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.EnableAuthenticatorModel.AuthenticatorUri">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.EnableAuthenticatorModel.RecoveryCodes">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.EnableAuthenticatorModel.StatusMessage">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.EnableAuthenticatorModel.Input">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="T:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.EnableAuthenticatorModel.InputModel">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.EnableAuthenticatorModel.InputModel.Code">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.ExternalLoginsModel.CurrentLogins">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.ExternalLoginsModel.OtherLogins">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.ExternalLoginsModel.ShowRemoveButton">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.ExternalLoginsModel.StatusMessage">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.GenerateRecoveryCodesModel.RecoveryCodes">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.GenerateRecoveryCodesModel.StatusMessage">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.IndexModel.Username">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.IndexModel.StatusMessage">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.IndexModel.Input">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="T:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.IndexModel.InputModel">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.IndexModel.InputModel.FirstName">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="T:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.ManageNavPages">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.ManageNavPages.Index">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.ManageNavPages.Email">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.ManageNavPages.ChangePassword">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.ManageNavPages.DownloadPersonalData">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.ManageNavPages.DeletePersonalData">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.ManageNavPages.ExternalLogins">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.ManageNavPages.PersonalData">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.ManageNavPages.TwoFactorAuthentication">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.ManageNavPages.IndexNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.ManageNavPages.EmailNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.ManageNavPages.ChangePasswordNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.ManageNavPages.DownloadPersonalDataNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.ManageNavPages.DeletePersonalDataNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.ManageNavPages.ExternalLoginsNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.ManageNavPages.PersonalDataNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.ManageNavPages.TwoFactorAuthenticationNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext)">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.ManageNavPages.PageNavClass(Microsoft.AspNetCore.Mvc.Rendering.ViewContext,System.String)">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.ResetAuthenticatorModel.StatusMessage">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.SetPasswordModel.Input">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.SetPasswordModel.StatusMessage">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="T:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.SetPasswordModel.InputModel">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.SetPasswordModel.InputModel.NewPassword">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.SetPasswordModel.InputModel.ConfirmPassword">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="T:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.ShowRecoveryCodesModel">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.ShowRecoveryCodesModel.RecoveryCodes">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.ShowRecoveryCodesModel.StatusMessage">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.ShowRecoveryCodesModel.OnGet">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.TwoFactorAuthenticationModel.HasAuthenticator">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.TwoFactorAuthenticationModel.RecoveryCodesLeft">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.TwoFactorAuthenticationModel.Is2faEnabled">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.TwoFactorAuthenticationModel.IsMachineRemembered">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.Manage.TwoFactorAuthenticationModel.StatusMessage">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.RegisterModel.Input">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.RegisterModel.ReturnUrl">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.RegisterModel.ExternalLogins">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="T:PresAndoClothesShop.Areas.Identity.Pages.Account.RegisterModel.InputModel">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.RegisterModel.InputModel.Email">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.RegisterModel.InputModel.Password">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.RegisterModel.InputModel.ConfirmPassword">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.RegisterConfirmationModel.Email">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.RegisterConfirmationModel.DisplayConfirmAccountLink">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.RegisterConfirmationModel.EmailConfirmationUrl">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.ResendEmailConfirmationModel.Input">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="T:PresAndoClothesShop.Areas.Identity.Pages.Account.ResendEmailConfirmationModel.InputModel">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.ResendEmailConfirmationModel.InputModel.Email">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.ResetPasswordModel.Input">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="T:PresAndoClothesShop.Areas.Identity.Pages.Account.ResetPasswordModel.InputModel">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.ResetPasswordModel.InputModel.Email">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.ResetPasswordModel.InputModel.Password">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.ResetPasswordModel.InputModel.ConfirmPassword">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.Account.ResetPasswordModel.InputModel.Code">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="T:PresAndoClothesShop.Areas.Identity.Pages.Account.ResetPasswordConfirmationModel">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Areas.Identity.Pages.Account.ResetPasswordConfirmationModel.OnGet">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="T:PresAndoClothesShop.Areas.Identity.Pages.ErrorModel">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.ErrorModel.RequestId">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Areas.Identity.Pages.ErrorModel.ShowRequestId">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Areas.Identity.Pages.ErrorModel.OnGet">
+            <summary>
+                This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+                directly from your code. This API may change or be removed in future releases.
+            </summary>
+        </member>
+        <member name="T:PresAndoClothesShop.Controllers.AdminController">
+            <summary>Контролер за управление на роли и потребители.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.AdminController.#ctor(Microsoft.AspNetCore.Identity.RoleManager{Microsoft.AspNetCore.Identity.IdentityRole},Microsoft.AspNetCore.Identity.UserManager{PresAndoClothesShop.Models.DefaultUser})">
+            <summary>Инициализира контролера.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.AdminController.ListAllRoles">
+            <summary>Показва всички роли.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.AdminController.CreateRole">
+            <summary>Форма за създаване на роля.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.AdminController.CreateRole(PresAndoClothesShop.ViewModel.CreateRoleViewModel)">
+            <summary>Създава нова роля.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.AdminController.EditRole(System.String)">
+            <summary>Редактира роля.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.AdminController.EditRole(PresAndoClothesShop.ViewModel.EditRoleViewModel)">
+            <summary>Записва редактирана роля.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.AdminController.EditUsersInRole(System.String)">
+            <summary>Редактира потребители в роля.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.AdminController.EditUsersInRole(System.Collections.Generic.List{PresAndoClothesShop.ViewModel.UserRoleViewModel},System.String)">
+            <summary>Записва промените на потребителите в роля.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.AdminController.DeleteRole(System.String)">
+            <summary>Потвърждение за изтриване на роля.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.AdminController.ConfirmDelete(System.String)">
+            <summary>Изтрива роля.</summary>
+        </member>
+        <member name="T:PresAndoClothesShop.Controllers.CartController">
+            <summary>Контролер за управление на количката.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.CartController.#ctor(PresAndoClothesShop.Data.ClothesShopContext,PresAndoClothesShop.Models.Cart)">
+            <summary>Инициализира контролера.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.CartController.Index">
+            <summary>Показва съдържанието на количката.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.CartController.AddToCart(System.Int32,System.String)">
+            <summary>Добавя продукт в количката.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.CartController.RemoveFromCart(System.Int32)">
+            <summary>Премахва продукт от количката.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.CartController.IncreaseQuantity(System.Int32)">
+            <summary>Увеличава количеството на продукт.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.CartController.DecreaseQuantity(System.Int32)">
+            <summary>Намалява количеството на продукт.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.CartController.ClearCart">
+            <summary>Изчиства количката.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.CartController.GetProductById(System.Int32)">
+            <summary>Връща продукт по Id.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.CartController.RedirectToLocal(System.String)">
+            <summary>Пренасочва към локален URL или към Index.</summary>
+        </member>
+        <member name="T:PresAndoClothesShop.Controllers.CategoriesController">
+            <summary>Контролер за управление на категории.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.CategoriesController.#ctor(PresAndoClothesShop.Data.ClothesShopContext)">
+            <summary>Инициализира контролера.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.CategoriesController.Index">
+            <summary>Показва всички категории.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.CategoriesController.Details(System.Nullable{System.Int32})">
+            <summary>Показва детайли за категория.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.CategoriesController.Create">
+            <summary>Форма за създаване на категория.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.CategoriesController.Create(PresAndoClothesShop.Models.Category)">
+            <summary>Създава нова категория.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.CategoriesController.Edit(System.Nullable{System.Int32})">
+            <summary>Форма за редактиране на категория.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.CategoriesController.Edit(System.Int32,PresAndoClothesShop.Models.Category)">
+            <summary>Записва редактирана категория.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.CategoriesController.Delete(System.Nullable{System.Int32})">
+            <summary>Потвърждение за изтриване на категория.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.CategoriesController.DeleteConfirmed(System.Int32)">
+            <summary>Изтрива категория.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.CategoriesController.CategoryExists(System.Int32)">
+            <summary>Проверява дали категория съществува.</summary>
+        </member>
+        <member name="T:PresAndoClothesShop.Controllers.HomeController">
+            <summary>Основен контролер на приложението.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.HomeController.#ctor(Microsoft.Extensions.Logging.ILogger{PresAndoClothesShop.Controllers.HomeController})">
+            <summary>Инициализира контролера.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.HomeController.Index">
+            <summary>Начална страница.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.HomeController.Privacy">
+            <summary>Страница за поверителност.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.HomeController.Error">
+            <summary>Показва страница за грешки.</summary>
+        </member>
+        <member name="T:PresAndoClothesShop.Controllers.OrderController">
+            <summary>Контролер за създаване и обработка на поръчки.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.OrderController.#ctor(PresAndoClothesShop.Data.ClothesShopContext,PresAndoClothesShop.Models.Cart)">
+            <summary>Инициализира контролера.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.OrderController.CheckOut">
+            <summary>Страница за финализиране на поръчка.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.OrderController.CheckOut(PresAndoClothesShop.Models.Order)">
+            <summary>Обработва финализиране на поръчка.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.OrderController.ChechoutComplete(PresAndoClothesShop.Models.Order)">
+            <summary>Показва завършена поръчка.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.OrderController.CreateOrder(PresAndoClothesShop.Models.Order)">
+            <summary>Създава поръчка и добавя артикули към нея.</summary>
+        </member>
+        <member name="T:PresAndoClothesShop.Controllers.ProductsController">
+            <summary>Контролер за управление на продукти.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.ProductsController.#ctor(PresAndoClothesShop.Data.ClothesShopContext)">
+            <summary>Инициализира контролера.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.ProductsController.Index">
+            <summary>Показва всички продукти.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.ProductsController.Details(System.Nullable{System.Int32})">
+            <summary>Показва детайли за продукт.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.ProductsController.Create">
+            <summary>Форма за създаване на продукт.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.ProductsController.Create(PresAndoClothesShop.Models.Product)">
+            <summary>Създава нов продукт.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.ProductsController.Edit(System.Nullable{System.Int32})">
+            <summary>Форма за редактиране на продукт.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.ProductsController.Edit(System.Int32,PresAndoClothesShop.Models.Product)">
+            <summary>Записва редактиран продукт.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.ProductsController.Delete(System.Nullable{System.Int32})">
+            <summary>Потвърждение за изтриване на продукт.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.ProductsController.DeleteConfirmed(System.Int32)">
+            <summary>Изтрива продукт.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Controllers.ProductsController.ProductExists(System.Int32)">
+            <summary>Проверява дали продукт съществува.</summary>
+        </member>
+        <member name="T:PresAndoClothesShop.Data.ClothesShopContext">
+            <summary>EF Core контекст за магазина.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Data.ClothesShopContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{PresAndoClothesShop.Data.ClothesShopContext})">
+            <summary>Инициализира контекста.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Data.ClothesShopContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>Конфигурира Lazy Loading и SQL Server.</summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Data.ClothesShopContext.Categories">
+            <summary>Категории.</summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Data.ClothesShopContext.Products">
+            <summary>Продукти.</summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Data.ClothesShopContext.CartItems">
+            <summary>Артикули в колички.</summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Data.ClothesShopContext.Orders">
+            <summary>Поръчки.</summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Data.ClothesShopContext.OrderItems">
+            <summary>Артикули в поръчки.</summary>
+        </member>
+        <member name="T:PresAndoClothesShop.Migrations.Initial">
+            <inheritdoc />
+        </member>
+        <member name="M:PresAndoClothesShop.Migrations.Initial.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:PresAndoClothesShop.Migrations.Initial.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:PresAndoClothesShop.Migrations.Initial.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:PresAndoClothesShop.Migrations.Second">
+            <inheritdoc />
+        </member>
+        <member name="M:PresAndoClothesShop.Migrations.Second.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:PresAndoClothesShop.Migrations.Second.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:PresAndoClothesShop.Migrations.Second.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:PresAndoClothesShop.Migrations._3">
+            <inheritdoc />
+        </member>
+        <member name="M:PresAndoClothesShop.Migrations._3.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:PresAndoClothesShop.Migrations._3.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:PresAndoClothesShop.Migrations._3.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:PresAndoClothesShop.Migrations.new1">
+            <inheritdoc />
+        </member>
+        <member name="M:PresAndoClothesShop.Migrations.new1.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:PresAndoClothesShop.Migrations.new1.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:PresAndoClothesShop.Migrations.new1.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:PresAndoClothesShop.Migrations.IdentityAdded">
+            <inheritdoc />
+        </member>
+        <member name="M:PresAndoClothesShop.Migrations.IdentityAdded.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:PresAndoClothesShop.Migrations.IdentityAdded.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:PresAndoClothesShop.Migrations.IdentityAdded.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:PresAndoClothesShop.Migrations.newUser1">
+            <inheritdoc />
+        </member>
+        <member name="M:PresAndoClothesShop.Migrations.newUser1.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:PresAndoClothesShop.Migrations.newUser1.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:PresAndoClothesShop.Migrations.newUser1.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:PresAndoClothesShop.Migrations.change1order">
+            <inheritdoc />
+        </member>
+        <member name="M:PresAndoClothesShop.Migrations.change1order.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:PresAndoClothesShop.Migrations.change1order.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:PresAndoClothesShop.Migrations.change1order.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:PresAndoClothesShop.Migrations.Change2">
+            <inheritdoc />
+        </member>
+        <member name="M:PresAndoClothesShop.Migrations.Change2.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:PresAndoClothesShop.Migrations.Change2.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:PresAndoClothesShop.Migrations.Change2.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:PresAndoClothesShop.Models.Cart">
+            <summary>Модел за пазарска количка.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Models.Cart.#ctor(PresAndoClothesShop.Data.ClothesShopContext)">
+            <summary>Инициализира количката.</summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Models.Cart.Id">
+            <summary>Идентификатор на количката.</summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Models.Cart.CartItems">
+            <summary>Списък с артикули в количката.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Models.Cart.GetCart(System.IServiceProvider)">
+            <summary>Връща количката от сесията или създава нова.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Models.Cart.EnsureCartExists(PresAndoClothesShop.Data.ClothesShopContext,System.String)">
+            <summary>Гарантира, че количката съществува в базата.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Models.Cart.GetCartItem(PresAndoClothesShop.Models.Product)">
+            <summary>Връща артикул от количката.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Models.Cart.AddToCart(PresAndoClothesShop.Models.Product,System.Int32)">
+            <summary>Добавя продукт в количката.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Models.Cart.ReduceQuantity(PresAndoClothesShop.Models.Product)">
+            <summary>Намалява количеството на продукт.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Models.Cart.IncreaseQuantity(PresAndoClothesShop.Models.Product)">
+            <summary>Увеличава количеството на продукт.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Models.Cart.RemoveFromCart(PresAndoClothesShop.Models.Product)">
+            <summary>Премахва продукт от количката.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Models.Cart.ClearCart">
+            <summary>Изчиства количката.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Models.Cart.GetAllCartItems">
+            <summary>Връща всички артикули в количката.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Models.Cart.GetCartTotal">
+            <summary>Изчислява общата стойност на количката.</summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Models.CartItem.Id">
+            <summary>
+            Номер
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Models.CartItem.CartId">
+            <summary>
+            Номер на количката
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Models.CartItem.Cart">
+            <summary>
+            Количката
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Models.CartItem.ProductId">
+            <summary>
+            Номер на продукта
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Models.CartItem.Quantity">
+            <summary>
+            Количество
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Models.CartItem.Product">
+            <summary>
+            Продукт
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Models.Category.Id">
+            <summary>
+            Уникален идентификатор
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Models.Category.Name">
+            <summary>
+            Категория
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Models.DefaultUser.FirstName">
+            <summary>Име на потребителя.</summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Models.DefaultUser.LastName">
+            <summary>Фамилия на потребителя.</summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Models.DefaultUser.Address">
+            <summary>Адрес на потребителя.</summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Models.DefaultUser.City">
+            <summary>Град на потребителя.</summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Models.DefaultUser.UserCreationDate">
+            <summary>Дата на създаване на профила.</summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Models.Order.Id">
+            <summary>
+            Уникален идентификатор
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Models.Order.OrderDate">
+            <summary>
+            Дата на поръчката
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Models.Order.Total">
+            <summary>
+            Обща сума
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Models.Order.Status">
+            <summary>
+            Статус на поръчката
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Models.OrderItem.Id">
+            <summary>
+            Идентификатор на поръчката
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Models.OrderItem.Quantity">
+            <summary>
+            Количество
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Models.OrderItem.Price">
+            <summary>
+            Цена
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Models.OrderItem.OrderId">
+            <summary>
+            Идентификатор на поръчката
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Models.OrderItem.Order">
+            <summary>
+            Поръчка
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Models.OrderItem.ProductId">
+            <summary>
+            Идентификатор на продукта
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Models.OrderItem.Product">
+            <summary>
+            Продукт
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Models.Product.Id">
+            <summary>
+            Уникален идентификатор
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Models.Product.Name">
+            <summary>
+            Продукт
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Models.Product.Description">
+            <summary>
+            Описание
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Models.Product.Price">
+            <summary>
+            Цена
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Models.Product.CategoryId">
+            <summary>
+            Категория
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Models.Product.Size">
+            <summary>
+            Размер
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Models.Product.Color">
+            <summary>
+            Цвят
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.Models.Product.ImageUrl">
+            <summary>
+            Снимка
+            </summary>
+        </member>
+        <member name="T:PresAndoClothesShop.Services.EmailSender">
+            <summary>Изпраща имейли чрез SendGrid.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Services.EmailSender.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>Инициализира изпращача на имейли.</summary>
+        </member>
+        <member name="M:PresAndoClothesShop.Services.EmailSender.SendEmailAsync(System.String,System.String,System.String)">
+            <summary>Изпраща имейл асинхронно.</summary>
+        </member>
+        <member name="P:PresAndoClothesShop.ViewModel.CreateRoleViewModel.RoleName">
+            <summary>
+            Име на ролята
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.ViewModel.EditRoleViewModel.Id">
+            <summary>
+            Уникален идентификатор
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.ViewModel.EditRoleViewModel.RoleName">
+            <summary>
+            Име на ролята
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.ViewModel.EditRoleViewModel.Users">
+            <summary>
+            Потребители
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.ViewModel.UserRoleViewModel.Id">
+            <summary>
+            Уникален идентификатор
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.ViewModel.UserRoleViewModel.Name">
+            <summary>
+            Име
+            </summary>
+        </member>
+        <member name="P:PresAndoClothesShop.ViewModel.UserRoleViewModel.IsSelected">
+            <summary>
+            Проверка дали потребителят е избран за тази роля
+            </summary>
+        </member>
+    </members>
+</doc>
