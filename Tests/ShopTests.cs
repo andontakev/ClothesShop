@@ -201,5 +201,20 @@
             var expectedId = 4;
             Assert.AreEqual(expectedId, orderItem.Id);
         }
+        [TestMethod]
+        public void OrderItemPriceTest()
+        {
+            var orderItem = new PresAndoClothesShop.Models.OrderItem
+            {
+                Id = 30,
+                OrderId = 20,
+                ProductId = 7,
+                Quantity = 2,
+                Price = 49.95m
+            };
+            Assert.AreEqual(49.95m, orderItem.Price);
+            Assert.AreEqual(2, orderItem.Quantity);
+        }
+
     }
 }
