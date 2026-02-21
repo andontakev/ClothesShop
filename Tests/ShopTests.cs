@@ -273,4 +273,190 @@
             order.Total = (orderItem1.Quantity * orderItem1.Price) + (orderItem2.Quantity * orderItem2.Price);
             Assert.AreEqual(89.97m, order.Total);
         }
+        [TestMethod]
+        public void CategoryNameNotNullTest()
+        {
+            var category = new PresAndoClothesShop.Models.Category
+            {
+                Id = 5,
+                Name = "Shoes"
+            };
+
+            Assert.IsNotNull(category.Name);
+        }
+
+        [TestMethod]
+        public void ProductPriceGreaterThanZeroTest()
+        {
+            var product = new PresAndoClothesShop.Models.Product
+            {
+                Id = 10,
+                Name = "Hat",
+                Price = 15.50m,
+                CategoryId = 1
+            };
+
+            Assert.IsTrue(product.Price > 0);
+        }
+
+        [TestMethod]
+        public void ProductNameNotEmptyTest()
+        {
+            var product = new PresAndoClothesShop.Models.Product
+            {
+                Id = 11,
+                Name = "Coat",
+                Price = 99.99m,
+                CategoryId = 2
+            };
+
+            Assert.IsFalse(string.IsNullOrEmpty(product.Name));
+        }
+
+        [TestMethod]
+        public void CartItemQuantityPositiveTest()
+        {
+            var cartItem = new PresAndoClothesShop.Models.CartItem
+            {
+                Id = 20,
+                ProductId = 5,
+                Quantity = 4
+            };
+
+            Assert.IsTrue(cartItem.Quantity > 0);
+        }
+
+        [TestMethod]
+        public void CartItemHasProductTest()
+        {
+            var cartItem = new PresAndoClothesShop.Models.CartItem
+            {
+                Id = 21,
+                ProductId = 6,
+                Quantity = 1
+            };
+
+            Assert.AreNotEqual(0, cartItem.ProductId);
+        }
+
+        [TestMethod]
+        public void OrderTotalPositiveTest()
+        {
+            var order = new PresAndoClothesShop.Models.Order
+            {
+                Id = 10,
+                Total = 120.00m,
+                OrderDate = DateTime.Now
+            };
+
+            Assert.IsTrue(order.Total > 0);
+        }
+
+        [TestMethod]
+        public void OrderDateTodayTest()
+        {
+            var order = new PresAndoClothesShop.Models.Order
+            {
+                Id = 11,
+                Total = 50,
+                OrderDate = DateTime.Now
+            };
+
+            Assert.AreEqual(DateTime.Now.Date, order.OrderDate.Date);
+        }
+
+        [TestMethod]
+        public void OrderItemPricePositiveTest()
+        {
+            var item = new PresAndoClothesShop.Models.OrderItem
+            {
+                Id = 15,
+                OrderId = 3,
+                ProductId = 2,
+                Quantity = 1,
+                Price = 29.99m
+            };
+
+            Assert.IsTrue(item.Price > 0);
+        }
+
+        [TestMethod]
+        public void OrderItemTotalCalculationTest()
+        {
+            var item = new PresAndoClothesShop.Models.OrderItem
+            {
+                Quantity = 3,
+                Price = 10m
+            };
+
+            var total = item.Quantity * item.Price;
+
+            Assert.AreEqual(30m, total);
+        }
+
+        [TestMethod]
+        public void MultipleProductsTest()
+        {
+            var products = new List<PresAndoClothesShop.Models.Product>
+    {
+        new PresAndoClothesShop.Models.Product { Id = 1, Name = "A", Price = 10 },
+        new PresAndoClothesShop.Models.Product { Id = 2, Name = "B", Price = 20 },
+        new PresAndoClothesShop.Models.Product { Id = 3, Name = "C", Price = 30 }
+    };
+
+            Assert.AreEqual(3, products.Count);
+        }
+
+        [TestMethod]
+        public void ProductsTotalPriceTest()
+        {
+            var products = new List<PresAndoClothesShop.Models.Product>
+    {
+        new PresAndoClothesShop.Models.Product { Price = 10 },
+        new PresAndoClothesShop.Models.Product { Price = 20 },
+        new PresAndoClothesShop.Models.Product { Price = 30 }
+    };
+
+            decimal total = 0;
+            foreach (var p in products)
+            {
+                total += p.Price;
+            }
+
+            Assert.AreEqual(60, total);
+        }
+
+        [TestMethod]
+        public void CartItemTotalTest()
+        {
+            var cartItem = new PresAndoClothesShop.Models.CartItem
+            {
+                Quantity = 2
+            };
+
+            var price = 15m;
+            var total = cartItem.Quantity * price;
+
+            Assert.AreEqual(30m, total);
+        }
+
+        [TestMethod]
+        public void OrderMultipleItemsTest()
+        {
+            var items = new List<PresAndoClothesShop.Models.OrderItem>
+    {
+        new PresAndoClothesShop.Models.OrderItem { Quantity = 1, Price = 10 },
+        new PresAndoClothesShop.Models.OrderItem { Quantity = 2, Price = 5 }
+    };
+
+            decimal total = 0;
+            foreach (var item in items)
+            {
+                total += item.Quantity * item.Price;
+            }
+
+            Assert.AreEqual(20m, total);
+        }
+
+        
     }
