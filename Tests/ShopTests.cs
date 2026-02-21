@@ -245,4 +245,32 @@
             };
             Assert.AreEqual(category.Id, product.CategoryId);
         }
-}
+        [TestMethod]
+        public void OrderTotalCalculationTest()
+        {
+            var order = new PresAndoClothesShop.Models.Order
+            {
+                Id = 1,
+                Total = 0m,
+                OrderDate = DateTime.Now
+            };
+            var orderItem1 = new PresAndoClothesShop.Models.OrderItem
+            {
+                Id = 1,
+                OrderId = order.Id,
+                ProductId = 1,
+                Quantity = 2,
+                Price = 19.99m
+            };
+            var orderItem2 = new PresAndoClothesShop.Models.OrderItem
+            {
+                Id = 2,
+                OrderId = order.Id,
+                ProductId = 2,
+                Quantity = 1,
+                Price = 49.99m
+            };
+            order.Total = (orderItem1.Quantity * orderItem1.Price) + (orderItem2.Quantity * orderItem2.Price);
+            Assert.AreEqual(89.97m, order.Total);
+        }
+    }
